@@ -77,3 +77,87 @@ num_check(s)
 num_check("100")
 num_check('5G')
 num_check('25.24')
+-----------------------------------------------------
+6. Write a Python program to find intersection of two given arrays using Lambda.
+Original arrays:
+[1, 2, 3, 5, 7, 8, 9, 10]
+[1, 2, 4, 8, 9]
+Intersection of the said arrays: [1, 2, 8, 9]
+==>
+a = [1, 2, 3, 5, 7, 8, 9, 10]
+b = [1, 2, 4, 8, 9]
+c = list(filter(lambda x: x in a, b))
+print(c)
+-----------------------------------------------------------
+7. Write a Python program to rearrange positive and negative numbers in a given array using Lambda.
+Original arrays:
+[-1, 2, -3, 5, 7, 8, 9, -10]
+Rearrange positive and negative numbers of the said array:
+[2, 5, 7, 8, 9, -10, -3, -1]
+Solution 1==>
+l = [-1, 2, -3, 5, 7, 8, 9, -10]
+ntv_l = []
+ptv_l = []
+for i in l:
+    if i < 0:
+       ntv_l.append(i)
+    else:
+        ptv_l.append(i)
+ntv_l.sort()
+ptv_l.sort()
+print(ptv_l+ntv_l)
+Solution 2==>
+l = [-1, 2, -3, 5, 7, 8, 9, -10]
+result = sorted(l, key=lambda i: 0 if i<0 else -1/i)
+print(result)
+-----------------------------------------------------------------
+8. Write a Python program to count the even, odd numbers in a given array of integers using Lambda
+Original arrays:
+[1, 2, 3, 5, 7, 8, 9, 10]
+Number of even numbers in the above array: 3
+Number of odd numbers in the above array: 5
+Solution1   ==>
+l = [1, 2, 3, 5, 7, 8, 9, 10]
+odd = len(list(filter(lambda i: i%2 != 0, l)))
+even = len(list(filter(lambda i: i%2 == 0, l)))
+print("Odd numbers in list:",odd)
+print("Even Numbers in list:", even)
+Solution 2  ==>
+list1 = [1, 2, 3, 5, 7, 8, 9, 10]
+def count_even_odd(l):
+    even = 0
+    odd = 0
+    for i in l:
+        if i%2 == 0:
+            even+=1
+        else:
+            odd+=1
+    print("Odd numbers in list:",odd)
+    print("Even Numbers in list:", even)
+count_even_odd(list1)
+-------------------------------------------------------------
+9. Write a Python program to find the values of length six in a given list using Lambda.
+Sample Output:
+Monday
+Friday
+Sunday
+Solution 1 ==>
+list1 = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday','Sunday']
+result = list(filter(lambda i: print(i) if len(i)==6 else None,list1))
+Solution 2 ==>
+list1 = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday','Sunday']
+result = list(filter(lambda i: len(i)==6, list1))
+print(result)
+--------------------------------------------------------------------------------------
+10. Write a Python program to add two given lists using map and lambda.
+Original list:
+[1, 2, 3]
+[4, 5, 6]
+Result: after adding two list
+[5, 7, 9]
+Solution  ==>>
+list_1 = [1, 2, 3]
+list_2 = [4, 5, 6]
+result = list(map(lambda a,b: a+b,list_1, list_2))
+print(result)
+
