@@ -1,0 +1,146 @@
+'''
+Write a Python program to find the first appearance of the substring 'not' and 'poor'
+from a given string, if 'not' follows the 'poor', replace the whole 'not'...'poor' substring
+with 'good'. Return the resulting string.
+Sample String : 'The lyrics is not that poor!'
+'The lyrics is poor!'
+Expected Result : 'The lyrics is good!'
+'The lyrics is poor!
+Solution 1 ==>
+def replace_not_poor (s):
+    s_not = s.find("not")
+    s_poor = s.find("poor")
+    if s_poor > s_not and s_not > 0 and s_poor > 0:
+        s = s.replace(s[s_not:(s_poor+4)], 'good')
+        print(s)
+    else:
+        print(s)
+s1 = "The lyrics is not that poor!"
+s2 = "The lyrics is poor!"
+replace_not_poor(s1)
+replace_not_poor(s2)
+-----------------------------------------------------
+Solution  2 ==>
+def replace_not_poor (s):
+    s_not = s.find("not")
+    s_poor = s.find("poor")
+    s = lambda s: s_poor > s_not and s_not > 0 and s_poor > 0,s.replace(s[s_not:(s_poor+4)], 'good')
+    #if s_poor > s_not and s_not > 0 and s_poor > 0:
+     #   s = s.replace(s[s_not:(s_poor+4)], 'good')
+    print(s[1])
+    #else:
+    #    print(s)
+s1 = "The lyrics is not that poor!"
+s2 = "The lyrics is poor!"
+replace_not_poor(s1)
+replace_not_poor(s2)
+==========================================================================================
+Write a Python function that takes a list of words and return the longest word and
+the length of the longest one.
+Sample Output:
+Longest word: Exercises
+Length of the longest word: 9
+==>
+def find_long_word(abc):
+    p = []
+    for i in abc:
+        p.append([len(i),i])
+        p.sort()
+    print('Longest word Length :',p[-1][0], '\nLongest word : ',p[-1][1])
+s = ['hi', 'hello', 'World', 'Sudarshan', 'Pradnya', 'Ovee', 'Mathematics']
+find_long_word(s)
+==>
+def find_longest_word(words_list):
+    word_len = []
+    for n in words_list:
+        word_len.append((len(n), n))
+    word_len.sort()
+    return word_len[-1][0], word_len[-1][1]
+result = find_longest_word(["PHP", "Exercises", "Backend"])
+print("\nLongest word: ",result[1])
+print("Length of the longest word: ",result[0])
+-------------------------------------------------------------------
+Write a Python program to remove the nth index character from a nonempty string.
+s = input('Enter the word:')
+ind =int(input("Enter The Index:"))
+def nth_index_remove(s,ind):
+    s1 = s[:ind]
+    s2 = s[ind+1:]
+    print(s1+s2)
+nth_index_remove(s,ind)
+---------------------------------------------------------------------------
+
+'''
+'''
+Write a Python program to change a given string to a new string where 
+the first and last chars have been exchanged.
+s = input('Enter the word:')
+s2 = s[-1]+s[1:-1]+s[0]
+print('New string:',s2)
+----------------------------------------------------------------------
+Write a Python program to remove the characters which have odd index values of a given string.
+
+
+def odd_values_string(str):
+  result = ""
+  for i in range(len(str)):
+    if i % 2 == 0:
+      result = result + str[i]
+  return result
+
+print(odd_values_string('abcdef'))
+print(odd_values_string('python'))
+==================================================
+Write a Python program to get a list, sorted in increasing order by the last element 
+in each tuple from a given list of non-empty tuples.
+Sample List : [(2, 5), (1, 2), (4, 4), (2, 3), (2, 1)]
+Expected Result : [(2, 1), (1, 2), (2, 3), (4, 4), (2, 5)]
+==>
+def last(n): return n[-1]
+
+def sort_list_last(tuples):
+  return sorted(tuples, key=last)
+
+print(sort_list_last([(2, 5), (1, 2), (4, 4), (2, 3), (2, 1)]))
+=--------------------------------------------------------------
+WAP to remove duplicate items
+l = [2, 5, 1, 2, 4, 4, 2, 3, 2, 1]
+s = set(l)
+print(list(s))
+---------------------------------------------------------------------
+Write a Python program to find those numbers which are divisible by 7
+and multiple of 5, between 1500 and 2700 (both included)
+l = []
+for i in range(1500,2701):
+    if i%7==0 and i%5==0:
+        l.append(i)
+print(l)
+---------------------------------------------------------------------------------------
+Write a Python program to create a lambda function that adds 15 to a given number passed
+in as an argument, also 
+create a lambda function that multiplies argument x with argument y and print the result.
+s = lambda a:a+15
+print(s(5))
+m = lambda x,y:x*y
+print(m(2,3))
+----------------------------------------------------------------------------------------
+Write a Python program to create a function that takes one argument, 
+and that argument will be multiplied with an unknown given number.
+==>
+
+def multiple(n):
+    return lambda x: x*n
+result = multiple(5)
+print( result(15))
+-----------------------------------------------------------------
+Write a Python program to sort a list of tuples using Lambda.
+Original list of tuples:
+[('English', 88), ('Science', 90), ('Maths', 97), ('Social sciences', 82)]
+Sorting the List of Tuples:
+[('Social sciences', 82), ('English', 88), ('Science', 90), ('Maths', 97)]
+==>
+l = [('English', 88), ('Science', 90), ('Maths', 97), ('Social sciences', 82)]
+l.sort(key=lambda x: x[1])
+print(l)
+'''
+
