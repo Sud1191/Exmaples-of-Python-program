@@ -160,4 +160,44 @@ list_1 = [1, 2, 3]
 list_2 = [4, 5, 6]
 result = list(map(lambda a,b: a+b,list_1, list_2))
 print(result)
-
+---------------------------------------------------------------
+11. Write a Python program to find the second lowest grade of any student(s) from the given 
+names and grades of each student using lists and lambda. Input number of students, 
+names and grades of each student.
+Input number of students: 5
+Name: S ROY
+Grade: 1
+Name: B BOSE
+Grade: 3
+Name: N KAR
+Grade: 2
+Name: C DUTTA
+Grade: 1
+Name: G GHOSH
+Grade: 1
+Names and Grades of all students:
+[['S ROY', 1.0], ['B BOSE', 3.0], ['N KAR', 2.0], ['C DUTTA', 1.0], ['G GHOSH', 1.0]]
+Second lowest grade: 2.0
+Names:
+N KAR
+==>
+l =[]
+n = int(input('Enter the total number of Students :'))
+for i in range(0, n):
+    name = input('Enter Student Name:')
+    grade = int(input(('Enter the Grade:')))
+    l.append([name,grade])
+print("Names and Grades of all Students:")
+print(l)
+order = sorted(l, key=lambda x: int(x[1]))
+for i in range(n):
+   if order[i][1] != order[0][1]:
+       second_low = order[i][1]
+       break
+print("\nSecond lowest grade: ",second_low)
+sec_student_name = [x[0] for x in order if x[1] == second_low]
+sec_student_name.sort()
+print("\nNames:")
+for s_name in sec_student_name:
+   print(s_name)
+-----------------------------------------------------------------------
