@@ -1,0 +1,105 @@
+''''''
+'''
+1. Write a Python program to find those numbers which are divisible
+by 7 and multiple of 5, between 1500 and 2700 (both included)
+==>
+l = []
+for i in range(1500,2701):
+    if i%7 ==0 and i%5 == 0:
+        l.append(i)
+print(l)
+--------------------------------------------------------------------
+2. 2. Write a Python program to convert temperatures to and from celsius, fahrenheit
+[ Formula : c/5 = f-32/9 [ where c = temperature in celsius and f = temperature in fahrenheit ]
+==>
+t = input("Enter The Temperature to convert :")
+degree = str(t[-1])
+temp = int(t[:-1])
+if degree.upper() == 'C':
+    f = round((9/5)*temp+32)
+    print('Temperature in celsius = ',temp,'C and temperature in fahrenheit =',f,'F')
+elif degree.upper() == 'F':
+    c = round((5/9) * (temp-32))
+    print('Temperature in celsius = ',c, 'C and temperature in fahrenheit =',temp, 'F')
+------------------------------------------------------------------------------------------------
+3. Write a Python program to guess a number between 1 to 9. Go to the editor
+Note : User is prompted to enter a guess. If the user guesses wrong then the prompt appears again 
+until the guess is correct, on successful guess, user will get a "Well guessed!" message, 
+and the program will exit.
+==>
+i = int(input("Guess the Number : "))
+while 0<= i <= 9:
+    if i == 5:
+        print('Well Guessed !!!')
+        break
+    else:
+        i = int(input('Please Try Again!!! Enter Number :'))
+    continue
+-------------------------------------------------------------------------------------------
+4. Write a Python program to construct the following pattern, using a nested for loop.
+
+* 
+* * 
+* * * 
+* * * * 
+* * * * * 
+* * * * 
+* * * 
+* * 
+*
+==> Solution 1
+for i in range(6):
+    print('*' * i)
+for i in range(5,0,-1):
+    print( '*' * i)
+Solution 2  ==>
+for i in range(6):
+    for j in range(i):
+        print('*', end='')
+    print('')
+for i in range(5,0,-1):
+    for j in range(i):
+        print('*',end='')
+    print('')
+---------------------------------
+5. Write a Python program that accepts a word from the user and reverse it.
+==>
+a = 'Sudarshan'
+for i in range(len(a) - 1,-1,-1):
+    print(a[i],end='')
+-----------------------------------------------------------------------
+6. Write a Python program to count the number of even and odd numbers from a series of numbers.
+Sample numbers : numbers = (1, 2, 3, 4, 5, 6, 7, 8, 9) 
+Expected Output :
+Number of even numbers : 5
+Number of odd numbers : 4
+Solution 1 ==>
+numbers = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15)
+even, odd = 0, 0
+for i in numbers:
+    if i%2 == 0:
+        even += 1
+    else:
+        odd += 1
+print('Number of even numbers :',even)
+print('Number of odd numbers :',odd)
+Solution 2 ==>
+numbers = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15)
+even, odd = 0, 0
+b = filter(lambda i: i%2 == 0 , numbers)
+c = filter(lambda i: i%2 != 0 , numbers)
+print('Number of even numbers :',len(list(b)))
+print('Number of odd numbers :',len(list(c)))
+-----------------------------------------------------------------------
+7. Write a Python program that prints each item and its corresponding type from the following list.
+Sample List : datalist = [1452, 11.23, 1+2j, True, 'w3resource', (0, -1), [5, 12], {"class":'V', "section":'A'}]
+==>
+
+datalist = [1452, 11.23, 1+2j, True, 'w3resource', (0, -1), [5, 12], {"class":'V', "section":'A'}]
+
+for i in datalist:
+    print(i,end='\t')
+    print(type(i))
+    print('\n')
+'''
+print('p"yt\'h"on')
