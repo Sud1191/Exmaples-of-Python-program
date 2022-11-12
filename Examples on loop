@@ -7,7 +7,7 @@ while i <=n:
     print(i)
     i= i+1
 ----------------------------------------------------------------------------
-2. 1. #WAP to print all Natural numbers in reverse from n to 1 using while loop
+2. WAP to print all Natural numbers in reverse from n to 1 using while loop
 ==>
 n, i = 1, 10
 while i >=n:
