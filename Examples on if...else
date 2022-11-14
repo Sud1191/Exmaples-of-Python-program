@@ -46,7 +46,7 @@ if num % 2 == 0:
 else:
     print('Number is odd')
 
-6. # Program to check year is leap year or not
+6. Program to check year is leap year or not
 
 yr = int(input('Enter the year :'))
 if yr % 4 == 0:
@@ -56,7 +56,7 @@ else:
 from datetime import datetime
 print(datetime.now())
 
-7. # Program to check whether the character is alphabet or not
+7. Program to check whether the character is alphabet or not
 
 char = input('Enter a character :')
 if char.isalpha():
@@ -64,7 +64,7 @@ if char.isalpha():
 else:
     print('Entered character is not an alphabet.')
 
-8. # Program to input any alphabet and check whether it is vowel or consonant
+8. Program to input any alphabet and check whether it is vowel or consonant
 
 char = input('Enter a character :')
 s_1 = {char}
@@ -74,7 +74,7 @@ if s_1.issubset(vowel):
 else:
     print('Entered character is a consonant.')
 
-9. # Program to check whether a character is uppercase or lowercase
+9. Program to check whether a character is uppercase or lowercase
 
 char = input('Enter a character :')
 if char.isupper():
@@ -82,7 +82,7 @@ if char.isupper():
 else:
     print('Entered character is in lowercase.')
 
-10.WAP to Input all sides of a triangle and check whether triangle is valid or not
+10. WAP to Input all sides of a triangle and check whether triangle is valid or not
 ==>
 
 side_1 = int(input('Enter the first Angle of triangle :'))
