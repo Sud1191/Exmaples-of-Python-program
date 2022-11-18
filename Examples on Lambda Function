@@ -7,7 +7,7 @@ Sorting the List of dictionaries :
 d = [{'make': 'Nokia', 'model': 216, 'color': 'Black'}, {'make': 'Mi Max', 'model': '2', 'color': 'Gold'}, {'make': 'Samsung', 'model': 7, 'color': 'Blue'}]
 sorted_d = sorted(d, key=lambda d: d['color'])
 print(sorted_d)
-----------------------------------------------------------------------------------------------
+--------------------------------------------------------------------
 2. Write a Python program to filter a list of integers using Lambda.
 Original list of integers:
 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
