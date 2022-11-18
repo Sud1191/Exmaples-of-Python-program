@@ -125,9 +125,7 @@ for i in a:
 print("Product of digits of number =",b)
 -------------------------------------------------
 15. WAP to enter a number and print its reverse 
-'''
-
-
+==>
 a = input("Enter the Number : ")
 b = reversed(a)
 print("Product of digits of number =",b)
