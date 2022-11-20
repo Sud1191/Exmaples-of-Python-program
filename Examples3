@@ -1,0 +1,13 @@
+n, i = 1, 10
+while i >=n:
+    print(i)
+    i= i-1
+----------------------------------------
+ # Write a Python program to iterate over dictionaries using for loop
+d = {'x': 10, 'y': 20, 'z': 30} 
+print(d.items())
+for dict_key, dict_value in d.items():
+    print(dict_key,'->',dict_value)
+    
+for i,j in d.items():
+    print(i,":",j)
